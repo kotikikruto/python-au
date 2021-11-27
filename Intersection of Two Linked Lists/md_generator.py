@@ -6,7 +6,7 @@ class MdGenerator:
         self.file_reader_result = file_reader_result
 
     def _generate_task_name(self) -> str:
-        return f'# {self.file_reader_result.task_name}\n\n'
+        return f'## {self.file_reader_result.task_name}\n\n'
 
     def _generate_task_description(self) -> str:
         return f'{self.file_reader_result.task_text}\n\n'
@@ -19,7 +19,7 @@ class MdGenerator:
                 + f'```python\n{self.file_reader_result.tests}```\n</blockquote></details>\n\n')
 
     def _generate_task_solution(self) -> str:
-        return f'```python\n{self.file_reader_result.solution}```\n'
+        return f'```python\n{self.file_reader_result.solution}\n```\n'
 
     def generate(self) -> str:
         result = ""

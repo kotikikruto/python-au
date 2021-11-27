@@ -18,16 +18,4 @@ class TestSortedSquares(unittest.TestCase):
         self.assertEqual(self.solution.sortedSquares([1, 2, 3, 4, 5]), [1, 4, 9, 16, 25])
 
     def test_negative_nums(self):
-        self.assertEqual(self.solution.sortedSquares([-10, -5, -2]), [4, 25, 100])
-
-    def test_find_with_positive(self):
-        self.assertEqual(self.solution.get_first_non_negative([2, 3, 5]), 0)
-
-    def test_find_with_negative(self):
-        self.assertEqual(self.solution.get_first_non_negative([-10, -5, -2]), 3)
-
-    def test_find_with_non_negative(self):
-        self.assertEqual(self.solution.get_first_non_negative([0, 1, 2, 3]), 0)
-
-    def test_find_with_mixed(self):
-        self.assertEqual(self.solution.get_first_non_negative([-10, -5, 0, 1, 2, 3]), 2)
+        self.assertEqual(self.solution.sortedSquares([-5, -4, -3, -2, -1]), [1, 4, 9, 16, 25])
